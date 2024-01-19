@@ -75,6 +75,7 @@ body {
   width: 2px;
   height: 5px; */
 }
+
 #ul-list li a.active::after,
 #ul-list li a:hover::after {
   content: "";
@@ -84,6 +85,7 @@ body {
   position: absolute;
   bottom: -6px;
   left: 5px;
+  /* transform: translate(16px); */
 }
 /* In CSS, the content: ""; property is used with pseudo-elements (::before and ::after) to insert content into an element. */
 #hero {
@@ -234,4 +236,54 @@ hr {
 }
 .featureProductCard {
   position: relative;
+}
+#repairservice {
+  background-image: url("./img/banner/b2.jpg");
+  background-size: contain;
+  text-align: center;
+  line-height: 2;
+  width: 100%;
+  height: 40vh;
+}
+#repairservice h3 {
+  color: white;
+}
+#repairservice h1 {
+  color: white;
+}
+
+.repair-button {
+  padding: 18px 30px;
+  background-color: darkcyan;
+  font-size: 25px;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+  color: white;
+  border-radius: 10px 25px;
+
+  transition-timing-function: ease;
+}
+.repair-button::after {
+  content: "";
+  background-color: rgba(239, 7, 7, 0.876);
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(200px);
+  transition-timing-function: ease;
+
+  transition-duration: 3000ms;
+}
+.repair-button:hover {
+  transform: scale(1.06);
+}
+.repair-button:hover:after {
+  transform: translate(0px);
+}
+#repairservice span {
+  color: rgba(239, 7, 7, 0.876);
 }
